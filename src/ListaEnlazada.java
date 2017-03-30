@@ -59,24 +59,24 @@ public class ListaEnlazada {
 	//BORRA UN ENLACE DADA UNA LLAVE
 	public Nodo delet (int key){
 	
-		Nodo current = first;
+		Nodo actual = first;
 		Nodo previous = first;
 		
-		while (current.iData != key){
-			if (current.next == null)
+		while (actual.iData != key){
+			if (actual.next == null)
 				return null;
 			else{
-				previous = current;
-				current = current.next;
+				previous = actual;
+				actual = actual.next;
 			}
 		}
 		
-		if (current == first)
+		if (actual == first)
 			first = first.next;
 		else
-			previous.next = current.next;
+			previous.next = actual.next;
 		
-		return current;
+		return actual;
 		
 	}
 
